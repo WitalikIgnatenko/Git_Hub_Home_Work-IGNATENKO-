@@ -1,0 +1,116 @@
+# «адание 1
+# ≈сть три кортежа целых чисел необходимо найти
+# элементы, которые есть во всех кортежах.
+# import random
+# list1 = []
+# list2 = []
+# list3 = []
+# 
+# while len(list1) != 10:
+#     list1.append(random.randint(0, 20))
+#     list2.append(random.randint(0, 20))
+#     list3.append(random.randint(0, 20))
+# tuple1 = tuple(list1)
+# tuple2 = tuple(list2)
+# tuple3 = tuple(list3)
+# 
+# def filtr(value):
+#     if value in tuple2 and value in tuple3:
+#         return True
+#     else:
+#         return False
+# finishlist = list(filter(filtr,tuple1))
+# print(f'common value for all tuples is ', finishlist)
+
+
+«адание 2
+≈сть три кортежа целых чисел необходимо найти
+элементы, которые уникальны дл€ каждого списка.
+
+
+import random
+list1 = []
+list2 = []
+list3 = []
+
+while len(list1) != 10:
+    list1.append(random.randint(0, 20))
+    list2.append(random.randint(0, 20))
+    list3.append(random.randint(0, 20))
+tupleList1 = tuple(list1)
+tupleList2 = tuple(list2)
+tupleList3 = tuple(list3)
+print(tupleList1, tupleList2, tupleList3)
+def unique(iterlist, checklist1, checklist2):
+    for i in iterlist:
+        if i not in checklist1 and i not in checklist2:
+            return i
+
+print(f'Ёлементы уникальны дл€ первого списка - ', unique(tupleList1, tupleList2, tupleList3))
+print(f'Ёлементы уникальны дл€ второго списка - ', unique(tupleList2, tupleList1, tupleList3))
+print(f'Ёлементы уникальны дл€ третьего списка - ', unique(tupleList3, tupleList2, tupleList1))
+
+
+«адание 3
+≈сть три кортежа целых чисел необходимо найти элементы, которые есть в каждом из кортежей и наход€тс€
+в каждом из кортежей на той же позиции.
+
+tupleList1 = (3, 13, 15, 5, 19, 5, 3, 13, 18, 12)
+tupleList2 = (3, 13, 3, 7, 1, 15, 11, 12, 8, 12)
+tupleList3 = (3, 13, 2, 13, 6, 8, 7, 1, 7, 12)
+
+def unique(iterlist, checklist1, checklist2):
+    generalNumbers = ''
+    for i in range(len(iterlist)):
+        if iterlist[i] == checklist1[i] and iterlist[i] == checklist2[i]:
+            generalNumbers += '___' + str(iterlist[i])
+    return generalNumbers
+
+print(f'Ёлементы, которые есть в каждом из кортежей и наход€тс€ '
+      f'в каждом из кортежей на той же позиции - ', unique(tupleList1, tupleList2, tupleList3))
+
+
+«адание 4
+—уществует два множества, содержащие названи€
+городов. Ќеобходимо создать третье множество, содержащее названи€, которые есть в обоих множествах.
+
+Towns1 = {'New York', 'Los Angeles','Chicago', 'Houston', 'Seattle'}
+Towns2 = {'New York','Boston', 'Los Angeles','Chicago','Miami', 'Houston', 'Seattle'}
+generalTown = Towns1.intersection(Towns2)
+print(generalTown)
+
+
+«адание 5
+—уществует два множества, содержащие названи€
+городов. Ќеобходимо создать третье множество, содержащее названи€, которые есть в первом множестве, но
+нет во втором.
+
+Towns1 = {'New York', 'Los Angeles','Chicago', 'Houston', 'Seattle','Vancouver'}
+Towns2 = {'New York','Boston', 'Los Angeles','Chicago','Miami', 'Houston', 'Seattle'}
+
+diffeentTown = Towns1.difference(Towns2)
+print(diffeentTown)
+
+«адание 6
+—уществует два множества, содержащие названи€
+городов. Ќеобходимо создать третье множество, содержащее названи€, которые есть во втором множестве, но
+нет в первом.
+
+Towns1 = {'New York', 'Los Angeles','Chicago', 'Houston', 'Seattle','Vancouver'}
+Towns2 = {'New York','Boston', 'Los Angeles','Chicago','Miami', 'Houston', 'Seattle'}
+
+diffeentTown = Towns2.difference(Towns1)
+print(diffeentTown)
+
+
+«адание 7
+—уществует два множества, содержащие названи€
+городов. Ќеобходимо создать третье множество,
+содержащее уникальные названи€ дл€ каждого множества.
+
+Towns1 = {'New York', 'Los Angeles','Chicago', 'Houston', 'Seattle','Vancouver'}
+Towns2 = {'New York','Boston', 'Los Angeles','Chicago','Miami', 'Houston', 'Seattle'}
+
+diffeentTown = Towns1.difference(Towns2).union(Towns2.difference(Towns1))
+
+print(diffeentTown)
