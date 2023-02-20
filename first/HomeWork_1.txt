@@ -1,0 +1,61 @@
+# Задание 1
+# Пользователь вводит с клавиатуры три числа. Необхо-
+# димо найти сумму чисел, произведение чисел. Результат
+# вычислений вывести на экран.
+
+userNumber1 = int (input("Enter number 1 =>"))
+userNumber2 = int (input("Enter number 1 =>"))
+userNumber3 = int (input("Enter number 1 =>"))
+
+print(f' {userNumber1} + {userNumber2} + {userNumber3} = {userNumber1 + userNumber2 + userNumber3}')
+
+
+# Задание 2
+# Пользователь вводит с клавиатуры три числа. Первое
+# число — зарплата за месяц, второе число — сумма месяч-
+# ного платежа по кредиту в банке, третье число — задол-
+# женность за коммунальные услуги. Необходимо вывести
+# на экран сумму, которая останется у пользователя после
+# всех выплат.
+
+userNumber1 = int(input("Enter salary per month =>"))
+userNumber2 = int(input("Enter amount per month bank loan payment =>"))
+userNumber3 = int(input("Enter utility bills =>"))
+
+print(f'the amount that you will have after all payments is {userNumber1 - userNumber2 - userNumber3}')
+
+# Задание 3
+# Напишите программу, вычисляющую площадь ром-
+# ба. Пользователь с клавиатуры вводит длину двух его
+# диагоналей.
+
+# diagonal_1 = int (input("Enter first diagonal =>"))
+# diagonal_2 = int (input("Enter second diagonal =>"))
+#
+# print(f'The area of the rhombus is {(diagonal_1*diagonal_2)/2}')
+
+# Задание 4
+# Выведите на экран надпись To be or not to be на разных
+# строках. Пример вывода:
+# To be
+# or not
+# to be
+
+print('To be \nor not \nto be')
+
+# Задание 5
+# Выведите на экран надпись «Life is what happens when
+# you're busy making other plans» John Lennon на разных
+# строках. Пример вывода:
+# “Life is what happens
+#	 when
+# 	     you’re busy making other plans”
+# 					John Lennon.
+
+print('"Life is what happens \n'
+      '     when\n'
+      '         you’re busy making other plans"\n'
+      '                                    John Lennon.')
+
+
+
